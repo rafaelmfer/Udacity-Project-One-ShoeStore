@@ -5,4 +5,6 @@
     <string name="new_login">New Login</string>
     <string name="login_with_existing_account">Login with existing account</string>
     <string name="title_activity_main">MainActivity</string>
+    <string name="welcome_to_shoe_store">Welcome to Shoe Store</string>
+    <string name="demo_app_to_show_a_shoe_store_and_practice_concepts_learned_in_udacity_lessons">Demo App, to show a shoe store and practice concepts learned in Udacity lessons</string>
 </resources>

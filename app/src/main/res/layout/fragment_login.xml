@@ -80,7 +80,6 @@
             android:layout_marginTop="4dp"
             android:hint="@string/password"
             app:endIconMode="password_toggle"
-            app:endIconTint="@color/black"
             app:layout_constraintBottom_toTopOf="@id/mbt_login"
             app:layout_constraintEnd_toEndOf="@id/guideline_parent_end"
             app:layout_constraintStart_toStartOf="@id/guideline_parent_start"
