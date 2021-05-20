@@ -4,4 +4,5 @@
     <string name="password">Password</string>
     <string name="new_login">New Login</string>
     <string name="login_with_existing_account">Login with existing account</string>
+    <string name="title_activity_main">MainActivity</string>
 </resources>
