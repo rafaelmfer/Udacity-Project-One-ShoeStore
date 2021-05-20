@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_parent_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/default_margin_screen" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_parent_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/default_margin_screen" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_logo_app"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="48dp"
+            android:src="@drawable/logo_shoe_store"
+            app:layout_constraintBottom_toTopOf="@+id/tv_app_name"
+            app:layout_constraintEnd_toEndOf="@id/guideline_parent_end"
+            app:layout_constraintStart_toStartOf="@id/guideline_parent_start"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.49"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+            app:strokeColor="@color/red_400"
+            app:strokeWidth="1dp" />
+
+        <TextView
+            android:id="@+id/tv_app_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@id/til_login_username"
+            app:layout_constraintEnd_toEndOf="@+id/iv_logo_app"
+            app:layout_constraintStart_toStartOf="@+id/iv_logo_app"
+            app:layout_constraintTop_toBottomOf="@id/iv_logo_app" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_login_username"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:hint="@string/email"
+            app:layout_constraintBottom_toTopOf="@id/til_login_password"
+            app:layout_constraintEnd_toEndOf="@id/guideline_parent_end"
+            app:layout_constraintStart_toStartOf="@id/guideline_parent_start"
+            app:layout_constraintTop_toBottomOf="@id/tv_app_name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_login_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:selectAllOnFocus="true"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_login_password"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:hint="@string/password"
+            app:endIconMode="password_toggle"
+            app:endIconTint="@color/black"
+            app:layout_constraintBottom_toTopOf="@id/mbt_login"
+            app:layout_constraintEnd_toEndOf="@id/guideline_parent_end"
+            app:layout_constraintStart_toStartOf="@id/guideline_parent_start"
+            app:layout_constraintTop_toBottomOf="@id/til_login_username">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_login_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:selectAllOnFocus="true"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/mbt_login"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/new_login"
+            app:layout_constraintBottom_toTopOf="@id/mbt_login_existing_account"
+            app:layout_constraintEnd_toEndOf="@id/guideline_parent_end"
+            app:layout_constraintStart_toStartOf="@id/guideline_parent_start"
+            app:layout_constraintTop_toBottomOf="@+id/til_login_password"
+            tools:layout_editor_absoluteX="146dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/mbt_login_existing_account"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="48dp"
+            android:text="@string/login_with_existing_account"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/guideline_parent_end"
+            app:layout_constraintStart_toStartOf="@id/guideline_parent_start"
+            app:layout_constraintTop_toBottomOf="@+id/mbt_login" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
