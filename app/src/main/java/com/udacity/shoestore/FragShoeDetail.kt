@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.databinding.FragmentShoeDetailBinding
 
 class FragShoeDetail : Fragment() {
@@ -21,6 +22,9 @@ class FragShoeDetail : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.run {
 
+            mbtCancel.setOnClickListener {
+                findNavController().popBackStack()
+            }
         }
     }
 }

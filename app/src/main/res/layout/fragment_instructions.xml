@@ -23,31 +23,18 @@
             app:layout_constraintGuide_end="@dimen/default_margin_screen" />
 
         <TextView
-            android:id="@+id/tv_instruction"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/default_margin_screen"
-            android:gravity="center"
-            android:text="@string/instructions"
-            android:textSize="24sp"
-            app:layout_constraintBottom_toTopOf="@id/tv_instruction_subtitle"
-            app:layout_constraintEnd_toEndOf="@id/guideline_parent_end"
-            app:layout_constraintStart_toStartOf="@id/guideline_parent_start"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0"
-            app:layout_constraintVertical_chainStyle="packed" />
-
-        <TextView
             android:id="@+id/tv_instruction_subtitle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="60dp"
             android:text="@string/on_the_next_screen"
             android:textSize="20sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0"
             app:layout_constraintBottom_toTopOf="@id/tv_instruction_one"
             app:layout_constraintEnd_toEndOf="@id/guideline_parent_end"
             app:layout_constraintStart_toStartOf="@id/guideline_parent_start"
-            app:layout_constraintTop_toBottomOf="@id/tv_instruction" />
+            app:layout_constraintVertical_chainStyle="packed" />
 
         <TextView
             android:id="@+id/tv_instruction_one"
