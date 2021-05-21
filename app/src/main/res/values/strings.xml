@@ -7,4 +7,12 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="welcome_to_shoe_store">Welcome to Shoe Store</string>
     <string name="demo_app_to_show_a_shoe_store_and_practice_concepts_learned_in_udacity_lessons">Demo App, to show a shoe store and practice concepts learned in Udacity lessons</string>
+    <string name="next">Next</string>
+    <string name="instructions">Instructions</string>
+    <string name="on_the_next_screen">On the next screen:</string>
+    <string name="click_the_add_button_to_add_a_shoe">1. Click the add button to add a shoe.</string>
+    <string name="add_a_shoe">add a shoe</string>
+    <string name="after_clicking_the_add_button_on_the_next_screen_fill_in_the_shoe_details">2. After clicking the add button, on the next screen fill in the shoe details.</string>
+    <string name="then_click_on_add">3. Then click on add</string>
+    <string name="got_it">Got it</string>
 </resources>
