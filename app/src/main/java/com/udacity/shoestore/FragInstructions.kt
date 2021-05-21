@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.databinding.FragmentInstructionsBinding
 import com.udacity.shoestore.extensions.visible
 
@@ -33,7 +34,7 @@ class FragInstructions : Fragment() {
                         mbtNext.text = getString(R.string.got_it)
                     }
                     tvInstructionTwo.isVisible && tvInstructionThree.isVisible -> {
-
+                        findNavController().navigate(FragInstructionsDirections.actionFragInstructionsToFragShoeList())
                     }
                 }
             }
