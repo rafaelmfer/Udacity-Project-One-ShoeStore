@@ -21,9 +21,8 @@ class FragShoeDetail : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.run {
-
             mbtCancel.setOnClickListener {
-                findNavController().popBackStack()
+                findNavController().navigate(FragShoeDetailDirections.actionFragShoeDetailToFragShoeList())
             }
         }
     }

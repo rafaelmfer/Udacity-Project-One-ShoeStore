@@ -30,7 +30,9 @@
         tools:layout="@layout/fragment_instructions">
         <action
             android:id="@+id/action_fragInstructions_to_fragShoeList"
-            app:destination="@id/fragShoeList" />
+            app:destination="@id/fragShoeList"
+            app:popUpTo="@id/fragWelcome"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/fragShoeList"
@@ -47,7 +49,7 @@
         android:label="Shoe Details"
         tools:layout="@layout/fragment_shoe_detail">
         <action
-            android:id="@+id/action_fragShoeDetail_to_fragShoeList2"
+            android:id="@+id/action_fragShoeDetail_to_fragShoeList"
             app:destination="@id/fragShoeList"
             app:popUpTo="@id/fragShoeList" />
     </fragment>
