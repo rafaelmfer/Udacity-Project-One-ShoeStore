@@ -2,6 +2,12 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <data>
+        <variable
+            name="mainViewModel"
+            type="com.udacity.shoestore.presentation.MainViewModel" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -55,7 +61,8 @@
                 android:inputType="textAutoCorrect"
                 android:maxLines="1"
                 android:selectAllOnFocus="true"
-                android:singleLine="true" />
+                android:singleLine="true"
+                android:text="@{mainViewModel.shoeName}" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -78,7 +85,8 @@
                 android:inputType="textAutoCorrect"
                 android:maxLines="1"
                 android:selectAllOnFocus="true"
-                android:singleLine="true" />
+                android:singleLine="true"
+                android:text="@{mainViewModel.shoeCompany}" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -98,10 +106,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:imeOptions="actionNext"
-                android:inputType="textAutoCorrect"
+                android:inputType="number"
                 android:maxLines="1"
                 android:selectAllOnFocus="true"
-                android:singleLine="true" />
+                android:singleLine="true"
+                android:text="@{mainViewModel.shoeSize}" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -122,7 +131,8 @@
                 android:layout_height="wrap_content"
                 android:imeOptions="actionDone"
                 android:inputType="textAutoCorrect"
-                android:selectAllOnFocus="true" />
+                android:selectAllOnFocus="true"
+                android:text="@{mainViewModel.shoeDescription}" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <androidx.constraintlayout.widget.Guideline

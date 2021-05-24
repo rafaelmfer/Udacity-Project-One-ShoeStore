@@ -1,6 +1,7 @@
 package com.udacity.shoestore.presentation
 
 import android.os.Bundle
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
@@ -14,6 +15,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private val navController by lazy { findNavController(R.id.nav_host_fragment) }
+    private val mainViewModel by viewModels<MainViewModel>()
 
     private lateinit var appBarConfiguration: AppBarConfiguration
 
