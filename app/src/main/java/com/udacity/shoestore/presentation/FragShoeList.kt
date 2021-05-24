@@ -56,10 +56,12 @@ class FragShoeList : Fragment() {
     private fun handlerShoeList(shoeList: MutableList<Shoe>) {
         shoeList.forEach {
             val inflatedViewDataBinding = DataBindingUtil.inflate<ItemShoeBinding>(layoutInflater, R.layout.item_shoe, binding.llShoeList, false)
-            inflatedViewDataBinding.tvShoeName.text = it.name
-            inflatedViewDataBinding.tvShoeCompany.text = it.company
-            inflatedViewDataBinding.tvShoeSize.text = it.size.toString()
-            inflatedViewDataBinding.tvShoeDescription.text = it.description
+            inflatedViewDataBinding.apply {
+                tvShoeName.text = getString(R.string.shoe_name_arg, it.name)
+                tvShoeCompany.text = getString(R.string.company_arg, it.company)
+                tvShoeSize.text = getString(R.string.shoe_size_arg, it.size.toString())
+                tvShoeDescription.text = getString(R.string.description_arg, it.description)
+            }
             binding.llShoeList.addView(inflatedViewDataBinding.root)
         }
     }

@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
+
         <variable
             name="mainViewModel"
             type="com.udacity.shoestore.presentation.MainViewModel" />
@@ -28,6 +29,7 @@
 
         <TextView
             android:id="@+id/tv_shoe_detail"
+            style="@style/TextAppearance.MaterialComponents.Overline"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/default_margin_screen"
@@ -62,7 +64,7 @@
                 android:maxLines="1"
                 android:selectAllOnFocus="true"
                 android:singleLine="true"
-                android:text="@{mainViewModel.shoeName}" />
+                android:text="@={mainViewModel.shoeName}" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -86,7 +88,7 @@
                 android:maxLines="1"
                 android:selectAllOnFocus="true"
                 android:singleLine="true"
-                android:text="@{mainViewModel.shoeCompany}" />
+                android:text="@={mainViewModel.shoeCompany}" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -110,7 +112,7 @@
                 android:maxLines="1"
                 android:selectAllOnFocus="true"
                 android:singleLine="true"
-                android:text="@{mainViewModel.shoeSize}" />
+                android:text="@={mainViewModel.shoeSize}" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -132,7 +134,7 @@
                 android:imeOptions="actionDone"
                 android:inputType="textAutoCorrect"
                 android:selectAllOnFocus="true"
-                android:text="@{mainViewModel.shoeDescription}" />
+                android:text="@={mainViewModel.shoeDescription}" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <androidx.constraintlayout.widget.Guideline

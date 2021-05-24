@@ -23,10 +23,11 @@ class FragShoeDetail : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        //Pass the ShoeViewModel into the binding.shoemodel so provide communication with xml
+        //Pass the ShoeViewModel into the binding.mainViewModel so provide communication with xml
         binding.mainViewModel = shoeDetailViewModel
         //Make LifeCycleAware
         binding.lifecycleOwner = this
+
         binding.run {
             bindCancelButton()
             bindAddButton()

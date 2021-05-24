@@ -10,17 +10,10 @@ class MainViewModel : ViewModel() {
     private val _shoeListMutableLiveData = MutableLiveData<MutableList<Shoe>>()
     val shoeListLiveData: LiveData<MutableList<Shoe>> get() = _shoeListMutableLiveData
 
-    private val _shoeName = MutableLiveData<String>()
-    val shoeName: LiveData<String> get() = _shoeName
-
-    private val _shoeCompany = MutableLiveData<String>()
-    val shoeCompany: LiveData<String> get() = _shoeCompany
-
-    private val _shoeSize = MutableLiveData<String>()
-    val shoeSize: LiveData<String> get() = _shoeSize
-
-    private val _shoeDescription = MutableLiveData<String>()
-    val shoeDescription: LiveData<String> get() = _shoeDescription
+    val shoeName = MutableLiveData<String>()
+    val shoeCompany = MutableLiveData<String>()
+    val shoeSize = MutableLiveData<String>()
+    val shoeDescription = MutableLiveData<String>()
 
     private val shoeList = mutableListOf<Shoe>()
 
