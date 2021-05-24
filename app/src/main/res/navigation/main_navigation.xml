@@ -12,7 +12,11 @@
         tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_fragLogin_to_fragWelcome"
-            app:destination="@id/fragWelcome" />
+            app:destination="@id/fragWelcome"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/fragWelcome"
@@ -21,7 +25,11 @@
         tools:layout="@layout/fragment_welcome">
         <action
             android:id="@+id/action_fragWelcome_to_fragInstructions"
-            app:destination="@id/fragInstructions" />
+            app:destination="@id/fragInstructions"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/fragInstructions"
@@ -31,6 +39,10 @@
         <action
             android:id="@+id/action_fragInstructions_to_fragShoeList"
             app:destination="@id/fragShoeList"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
             app:popUpTo="@id/fragWelcome"
             app:popUpToInclusive="true" />
     </fragment>
@@ -41,7 +53,11 @@
         tools:layout="@layout/fragment_shoe_list">
         <action
             android:id="@+id/action_fragShoeList_to_fragShoeDetail"
-            app:destination="@id/fragShoeDetail" />
+            app:destination="@id/fragShoeDetail"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/fragShoeDetail"
@@ -51,6 +67,10 @@
         <action
             android:id="@+id/action_fragShoeDetail_to_fragShoeList"
             app:destination="@id/fragShoeList"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
             app:popUpTo="@id/fragShoeList" />
     </fragment>
 </navigation>
