@@ -23,27 +23,34 @@ class FragShoeDetail : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        //Pass the ShoeViewModel into the binding.mainViewModel so provide communication with xml
-        binding.mainViewModel = shoeDetailViewModel
-        //Make LifeCycleAware
-        binding.lifecycleOwner = this
-
+        observables()
         binding.run {
-            bindCancelButton()
-            bindAddButton()
+            //Pass the ShoeViewModel into the binding.mainViewModel so provide communication with xml
+            mainViewModel = shoeDetailViewModel
+            //Make LifeCycleAware
+            lifecycleOwner = this@FragShoeDetail
         }
     }
 
-    private fun FragmentShoeDetailBinding.bindAddButton() {
-        mbtAddShoe.setOnClickListener {
-            shoeDetailViewModel.addShoe()
-            findNavController().navigate(FragShoeDetailDirections.actionFragShoeDetailToFragShoeList())
+    private fun observables() {
+        shoeDetailViewModel.run {
+            eventCancelLiveData.observe(viewLifecycleOwner, { isCanceled ->
+                if (isCanceled) {
+                    navigateToFragShoeList()
+                    onCancelEventComplete()
+                }
+            })
+
+            eventAddShoeLiveData.observe(viewLifecycleOwner, { isAdded ->
+                if (isAdded) {
+                    navigateToFragShoeList()
+                    onAddShoeComplete()
+                }
+            })
         }
     }
 
-    private fun FragmentShoeDetailBinding.bindCancelButton() {
-        mbtCancel.setOnClickListener {
-            findNavController().navigate(FragShoeDetailDirections.actionFragShoeDetailToFragShoeList())
-        }
+    private fun navigateToFragShoeList() {
+        findNavController().navigate(FragShoeDetailDirections.actionFragShoeDetailToFragShoeList())
     }
 }
