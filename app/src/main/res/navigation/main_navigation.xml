@@ -43,7 +43,7 @@
             app:exitAnim="@anim/fragment_fade_exit"
             app:popEnterAnim="@android:anim/slide_in_left"
             app:popExitAnim="@android:anim/slide_out_right"
-            app:popUpTo="@id/fragWelcome"
+            app:popUpTo="@id/fragLogin"
             app:popUpToInclusive="true" />
     </fragment>
     <fragment
@@ -71,6 +71,7 @@
             app:exitAnim="@anim/fragment_fade_exit"
             app:popEnterAnim="@android:anim/slide_in_left"
             app:popExitAnim="@android:anim/slide_out_right"
-            app:popUpTo="@id/fragShoeList" />
+            app:popUpTo="@id/fragShoeList"
+            app:popUpToInclusive="true" />
     </fragment>
 </navigation>

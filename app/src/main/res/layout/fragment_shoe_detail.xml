@@ -9,6 +9,9 @@
             type="com.udacity.shoestore.presentation.MainViewModel" />
     </data>
 
+    <!-- Use ConstraintLayout to properly align the different views -->
+    <!-- A ViewGroup where elements can be arranged freely, are placed by the system based on constraints -->
+    <!-- and may adapt in size based on screen size and orientation. -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">

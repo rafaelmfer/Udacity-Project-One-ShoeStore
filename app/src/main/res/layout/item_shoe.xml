@@ -3,15 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- It is not necessary to use ConstraintLayout as the parent view. -->
+    <!-- So I use MaterialCardView to improve the look. -->
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/default_margin_screen"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="@dimen/default_margin_screen"
-        android:layout_marginBottom="8dp"
+        android:layout_margin="@dimen/default_margin_screen"
         app:cardCornerRadius="@dimen/default_radius_smooth">
 
+        <!-- Use ConstraintLayout to properly align the different views -->
+        <!-- A ViewGroup where elements can be arranged freely, are placed by the system based on constraints -->
+        <!-- and may adapt in size based on screen size and orientation. -->
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -64,6 +66,5 @@
                 tools:text="Shoe Description" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
     </com.google.android.material.card.MaterialCardView>
 </layout>

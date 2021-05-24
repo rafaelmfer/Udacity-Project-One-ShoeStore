@@ -2,6 +2,9 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <!-- Use ConstraintLayout to properly align the different views -->
+    <!-- A ViewGroup where elements can be arranged freely, are placed by the system based on constraints -->
+    <!-- and may adapt in size based on screen size and orientation. -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -15,6 +18,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
+            <!-- LinearLayout because elements are simply aligned vertically -->
             <LinearLayout
                 android:id="@+id/ll_shoe_list"
                 android:layout_width="match_parent"
