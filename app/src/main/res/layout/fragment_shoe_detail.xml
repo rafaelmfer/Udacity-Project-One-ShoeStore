@@ -162,7 +162,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
             android:layout_marginBottom="@dimen/default_margin_screen"
-            android:text="@string/add"
+            android:text="@string/save"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@id/guideline_parent_end"
             app:layout_constraintStart_toEndOf="@id/mbt_cancel"
